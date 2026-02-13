@@ -7,19 +7,22 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div class="background-blur"></div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
     <main class="glass-container">
         <header class="hero-section">
-            <span class="badge">AI-Ready Analysis</span>
             <h1>Text Intelligence</h1>
-            <p class="subtitle">Experience clarity. Analyze content with precision.</p>
+            <p class="subtitle">Analyze. Optimize. Create.</p>
         </header>
 
         <section class="stats-row">
@@ -38,23 +41,23 @@
         </section>
 
         <section class="input-area">
+            <textarea id="textInput" placeholder="Start typing..."></textarea>
+            
             <div class="file-upload-trigger" onclick="document.getElementById('fileInput').click()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="17 8 12 3 7 8"></polyline>
                     <line x1="12" y1="3" x2="12" y2="15"></line>
                 </svg>
-                <span>Upload Document</span>
+                <span>Upload</span>
                 <input type="file" id="fileInput" accept=".txt,.md,.csv,.js,.html,.json,.xml">
             </div>
-
-            <textarea id="textInput" placeholder="Type or paste your content here to begin analysis..."></textarea>
         </section>
 
         <section class="insights-section">
-            <h3>Key Topics</h3>
+            <h3>Top Keywords</h3>
             <div id="topKeywords" class="tag-cloud">
-                <span class="placeholder-text">Analysis awaiting input...</span>
+                <span style="color: rgba(255,255,255,0.3);">Waiting for content...</span>
             </div>
         </section>
     </main>
