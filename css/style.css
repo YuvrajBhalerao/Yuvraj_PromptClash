@@ -1,0 +1,126 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 { margin-bottom: 5px; }
+p.subtitle { color: #64748b; margin-top: 0; }
+
+/* File Upload Styling */
+.file-upload-wrapper {
+    background: #e0e7ff;
+    border: 2px dashed #818cf8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.file-upload-wrapper:hover {
+    background: #c7d2fe;
+}
+
+input[type="file"] {
+    display: none; /* Hide the ugly default button */
+}
+
+.custom-file-label {
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    font-size: 1.1rem;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea:focus { outline: none; border-color: var(--primary); }
+
+.keywords-section {
+    margin-top: 20px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    background: #e0e7ff;
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
