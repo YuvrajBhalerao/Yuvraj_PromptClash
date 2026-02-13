@@ -121,10 +121,11 @@ h1 {
     margin-top: 10px;
 }
 
-/* --- Colorful Stats Grid (6 items) --- */
+/* --- Colorful Stats Grid (FIXED: Strict 3x2 Layout) --- */
 .stats-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* This forces exactly 3 columns. With 6 items, it creates 2 rows. */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 15px;
     margin-bottom: 30px;
 }
@@ -346,6 +347,7 @@ textarea::placeholder {
     h1 { font-size: 2.5rem; }
     
     .stats-row {
+        /* On Mobile, 3 columns is too tight, so we use 2 columns (3 rows total) */
         grid-template-columns: repeat(2, 1fr); 
     }
     
