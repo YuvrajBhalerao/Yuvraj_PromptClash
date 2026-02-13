@@ -3,49 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instant Text Analyzer</title>
+    <title>Text Intelligence</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Text Analyzer</h1>
-        <p class="subtitle">Type below, or upload a text file (.txt, .md, .csv)</p>
-    </header>
+    <div class="background-blur"></div>
 
-    <div class="file-upload-wrapper" onclick="document.getElementById('fileInput').click()">
-        <input type="file" id="fileInput" accept=".txt,.md,.csv,.js,.html,.json,.xml">
-        <label for="fileInput" class="custom-file-label">📂 Click here to upload a document</label>
-        <div style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">(Accepts .txt, .md, and code files)</div>
-    </div>
+    <main class="glass-container">
+        <header class="hero-section">
+            <span class="badge">AI-Ready Analysis</span>
+            <h1>Text Intelligence</h1>
+            <p class="subtitle">Experience clarity. Analyze content with precision.</p>
+        </header>
 
-    <div class="stats-grid">
-        <div class="stat-card">
-            <span id="wordCount" class="stat-value">0</span>
-            <span class="stat-label">Words</span>
-        </div>
-        <div class="stat-card">
-            <span id="charCount" class="stat-value">0</span>
-            <span class="stat-label">Characters</span>
-        </div>
-        <div class="stat-card">
-            <span id="readTime" class="stat-value">0s</span>
-            <span class="stat-label">Read Time</span>
-        </div>
-    </div>
+        <section class="stats-row">
+            <div class="stat-card">
+                <span class="stat-label">Words</span>
+                <span id="wordCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Characters</span>
+                <span id="charCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Read Time</span>
+                <span id="readTime" class="stat-value">0s</span>
+            </div>
+        </section>
 
-    <textarea id="textInput" placeholder="Or just start typing here..."></textarea>
+        <section class="input-area">
+            <div class="file-upload-trigger" onclick="document.getElementById('fileInput').click()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Upload Document</span>
+                <input type="file" id="fileInput" accept=".txt,.md,.csv,.js,.html,.json,.xml">
+            </div>
 
-    <div class="keywords-section">
-        <h3>Top Frequent Words (5+ chars)</h3>
-        <div id="topKeywords" class="tag-cloud">
-            <span style="color: #94a3b8; font-style: italic;">Start typing...</span>
-        </div>
-    </div>
-</div>
+            <textarea id="textInput" placeholder="Type or paste your content here to begin analysis..."></textarea>
+        </section>
 
-<script src="js/app.js"></script>
+        <section class="insights-section">
+            <h3>Key Topics</h3>
+            <div id="topKeywords" class="tag-cloud">
+                <span class="placeholder-text">Analysis awaiting input...</span>
+            </div>
+        </section>
+    </main>
 
+    <script src="js/app.js"></script>
 </body>
 </html>
